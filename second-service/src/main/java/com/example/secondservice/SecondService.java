@@ -22,4 +22,10 @@ public class SecondService {
     log.info(header);
     return "Second Message";
   }
+  
+  
+  @GetMapping("/check")
+  public String check(){
+    return "Second Check";
+  }
 }

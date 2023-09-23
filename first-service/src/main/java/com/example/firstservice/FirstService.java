@@ -17,8 +17,13 @@ public class FirstService {
   }
   
   @GetMapping("/message")
-  public String message(@@RequestHeader("first-request") String header){
+  public String message(@RequestHeader("first-request") String header){
     log.info(header);
     return "First Message";
+  }
+  
+  @GetMapping("/check")
+  public String check(){
+    return "First Check";
   }
 }

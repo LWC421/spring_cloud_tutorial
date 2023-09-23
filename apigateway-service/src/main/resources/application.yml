@@ -19,7 +19,11 @@ spring:
           uri: http://localhost:8001/
           predicates:
             - Path=/first-service/**
+          filters:
+            - CustomFilter
         - id: second-service
           uri: http://localhost:8002/
           predicates:
             - Path=/second-service/**
+          filters:
+            - CustomFilter
